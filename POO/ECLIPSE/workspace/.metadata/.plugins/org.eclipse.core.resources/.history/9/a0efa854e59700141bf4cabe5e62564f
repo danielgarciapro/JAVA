@@ -1,0 +1,8 @@
+package pendulo;
+
+public class TestPendulo {
+	public static void main(String[] args) {
+		Pendulo p1 = new Pendulo(20)
+		System.out.println(p1);
+	}
+}

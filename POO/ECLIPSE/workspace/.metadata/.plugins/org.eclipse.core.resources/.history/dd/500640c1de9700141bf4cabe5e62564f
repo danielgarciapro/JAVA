@@ -1,0 +1,10 @@
+package persona;
+
+public class TestPersonaArgumentos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

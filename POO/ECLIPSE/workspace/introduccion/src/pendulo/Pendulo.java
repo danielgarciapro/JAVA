@@ -1,0 +1,22 @@
+package pendulo;
+
+public class Pendulo {
+	private double longitud;
+	public Pendulo(double longitud) {
+		this.longitud = longitud;
+	}
+	public double getLongitud() {
+		return longitud;
+	}
+	public void setLongitud(double longitud) {
+		this.longitud = longitud;
+	}
+	public double calcularPeriodo(){
+		return 2*Math.PI*(Math.sqrt(this.longitud/9.81));
+	}
+	@Override
+	public String toString() {
+		return "Pendulo [longitud=" + longitud + "cm, calcularPeriodo()="
+				+ calcularPeriodo() + "s]";
+	}
+}

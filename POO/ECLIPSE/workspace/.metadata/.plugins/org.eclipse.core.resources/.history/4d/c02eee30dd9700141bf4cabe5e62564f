@@ -1,0 +1,10 @@
+package persona;
+
+public class TestPersona {
+
+	public static void main(String[] args) {
+		Persona p1 = new Persona("Pepe", 25);
+		System.out.println(p1);
+	}
+
+}
