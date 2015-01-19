@@ -1,0 +1,13 @@
+package diapositivas;
+
+import java.util.ArrayList;
+
+public class TestArrayList {
+
+	public static void main(String[] args) {
+		ArrayList list = new ArrayList<>();
+		System.out.println("Tamaño de la lista: "+list.size());
+		
+	}
+
+}

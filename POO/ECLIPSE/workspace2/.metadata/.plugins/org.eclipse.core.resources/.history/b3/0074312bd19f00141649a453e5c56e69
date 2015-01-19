@@ -1,0 +1,22 @@
+package diapositivas;
+
+import java.util.ArrayList;
+
+public class TestArrayList {
+
+	public static void main(String[] args) {
+		ArrayList list = new ArrayList<>();
+		//tamaño de la lista
+		System.out.println("Tamaño de la lista: "+list.size());
+		list.add("Madrid");
+		list.add ("Londres");
+		list.add ("Milan");
+		list.add ("Paris");
+		list.add ("New York");
+		list.add ("Berlin");
+		System.out.println ("¿Esta Paris? " + list.contains ("Paris"));
+		//Anadimos otra ciudad en la posicion 2
+		list.add (2, "Roma");
+	}
+
+}

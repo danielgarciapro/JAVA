@@ -1,0 +1,17 @@
+package diapositivas;
+
+public class ArraysBidimensionales {
+	public static void main(String[] args) {
+		int[][] array = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9},
+				{10,11,12}
+		};
+		for (int fila = 0; fila < array.length ; fila++) {
+			for (int columna=0;columna<array[fila].length;columna++){
+			System.out.println(array[fila][columna] + " ");
+			}
+		}
+	}
+}

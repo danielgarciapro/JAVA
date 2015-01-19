@@ -1,0 +1,25 @@
+package alumno;
+
+public class TestAlumnos {
+
+	public static void main(String[] args) {
+		// TODO Apéndice de método generado automáticamente
+		Alumnos a1= new Alumnos("hola",10,10,"10");
+		System.out.println(a1);
+		a1.setCurso("1º DAM");
+		a1.setDni(77366081);
+		a1.setEdad(23);
+		a1.setNombre("Andres");
+		System.out.println(a1);
+		//System.out.println("Es mayor de edad? "+a1.esMayorEdad());
+		//Crear alumno nuevo con constructor por defecto
+		Alumnos a2= new Alumnos();
+		a2.setCurso("1 DAM");
+		a2.setDni(445566);
+		a2.setEdad(16);
+		a2.setNombre("Andres");
+		System.out.println(a2);
+		//System.out.println("Es mayor de edad? "+a2.esMayorEdad());
+	}
+
+}
