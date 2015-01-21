@@ -1,0 +1,7 @@
+package diapositivas;
+
+import java.util.List;
+
+public class ListaPersonas {
+	List<Persona> listaPersonas;
+}

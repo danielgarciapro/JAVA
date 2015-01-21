@@ -1,0 +1,36 @@
+package diapositivas;
+
+public class ArraysBidimensionales {
+	public static void main(String[] args) {
+		int[][] array = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9},
+				{10,11,12}
+		};
+		for (int fila = 0; fila < array.length ; fila++) {
+			for (int columna=0;columna<array[fila].length;columna++){
+			System.out.println("Valor en ["+fila+"]["+columna+"] es "+array[fila][columna]);
+			}
+		}
+		//calculamos el tamaño de la matriz
+		int tamano = 0;
+		int total = 0;
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+			++tamano;
+			total += array[i][j];
+			}
+		}
+		System.out.println("El total de elementos es : "+tamano);
+		System.out.println("El valor total de l9os elementos es: "+total);
+		System.out.println("Su valor medio es: "+total/tamano);
+		/*calcular el valor medio
+			int suma=0;
+			for (int d : array) {
+			suma+=d;
+			}
+			int media = suma/tamano;
+			System.out.printf("\nEl valor medio es %.3f\n",media);*/
+	}
+}
