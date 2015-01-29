@@ -1,0 +1,20 @@
+package ejercicios;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestDatos {
+
+	public static void main(String[] args) {
+		List<Double> lista = new ArrayList<Double>();
+		lista.add(1.0);
+		lista.add(new Double(3));
+		lista.add((double) 3);
+		lista.add(7.0);
+		lista.add(2.0);
+		lista.toArray();
+		Datos d = new Datos(lista.toArray());
+
+	}
+
+}

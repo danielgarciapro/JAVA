@@ -1,0 +1,13 @@
+package ejercicios;
+
+public class TestColecciones1 {
+
+	public static void main(String[] args) {
+		Colecciones1 c = new Colecciones1();
+		System.out.println(c);
+		System.out.println(c.getI(11));
+		c.setPosicion(11, 5);
+		System.out.println(c);
+	}
+
+}

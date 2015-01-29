@@ -1,0 +1,16 @@
+package ejercicios;
+
+public class TestTienda {
+
+	public static void main(String[] args) {
+		Tienda tienda = new Tienda();
+		tienda.addProducto(new Producto(0, "CD", 3));
+		//otra forma de hacerlo
+		Producto p1 = new Producto(1, "DVD", 6);
+		tienda.addProducto(new Producto(2, "lector CD", 5));
+		//otra forma de hacerlo
+		Producto p2 = new Producto(3, "lector DVD", 12);
+		System.out.println(tienda);
+	}
+
+}

@@ -1,0 +1,28 @@
+package ejercicios;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tienda {
+	private List<Producto> Lista;
+
+	public Tienda() {
+		this.Lista = new ArrayList<Producto>();
+	}
+	
+	public void addProducto(Producto p){
+		Lista.add(p);
+	}
+
+	public List<Producto> getLista() {
+		return Lista;
+	}
+	
+	public void eliminarProducto(Producto p){
+		if (Lista.contains(p)) Lista.remove(p);
+	}
+	
+	public Producto productoMasCaro(){
+		
+	}
+}

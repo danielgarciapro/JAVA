@@ -1,0 +1,49 @@
+package ejercicios;
+
+import java.util.Arrays;
+
+public class TestColecciones1 {
+
+	public static void main(String[] args) {
+		Colecciones1 c = new Colecciones1();
+		System.out.println(c);
+		c.setPosicion(c.getArray().length-1, 5);
+		System.out.println(c);
+		//da valor al array
+		int valorInicial = 3;
+		for (int i = 0; i < c.getArray().length-1; i++) {
+			c.setPosicion(i, valorInicial);
+			valorInicial *= 2;
+		}
+		System.out.println(c);
+		//suma todos los valores
+		int suma = 0;
+		for (int i = 0; i < c.getArray().length; i++) {
+			suma+=c.getArray()[i];
+		}
+		System.out.printf("La suma de todos los valores es %d%n", suma);
+		//Cambia el valor del array y divide por 3 todos los ultimo cinco valores.
+		if ((c.getArray().length)>=5){
+			for (int i = c.getArray().length-5; i < c.getArray().length; i++) {
+				c.setPosicion(i, c.getArray()[i]/3);
+			}
+		}
+		System.out.println(c);
+		//Calcula ahora el valor mas pequeño almacenado en el array.
+		//metodo con Arrays.sort
+		Arrays.sort(c.getArray());
+		System.out.println(c);
+		System.out.println("El elemento mas pequeño vale: "+c.getArray()[0]);
+		//metodo casero
+		int valorMenor = c.getArray()[0];
+		for (int i = 1; i < c.getArray().length; i++) {
+			if(c.getArray()[i]<valorMenor) valorMenor=c.getArray()[i]; 
+		}
+		System.out.println("El valor menor es: "+valorMenor);
+		//Muestra todos los valores en tres filas de cuatro columnas, con una separacion de cinco espacios
+		for (int i = 0; i < c.getArray().length; i++) {
+			System.out.print(c.getArray()[i]+" ");
+		}
+	}
+
+}

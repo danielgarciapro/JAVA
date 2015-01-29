@@ -1,0 +1,27 @@
+package diapositivas;
+
+public class String1 {
+
+	public static void main(String[] args) {
+		//4 String definidos de diferente manera
+		String String1 = "Hola mundo";
+		String String2 = "Hola mundo";
+		String String3 = new String("Hola mundo");
+		String String4 = new String(new char[]{'H','o','l','a',' ','m','u','n','d','o'}) ;
+		//usamos comparador == (comparan posiciones de memoria)
+		System.out.println(String1==String2);
+		System.out.println(String1==String3);
+		System.out.println(String1==String4);
+		System.out.println(String3==String4);
+		System.out.println(String2==String3);
+		System.out.println(String2==String4);
+		//usamos metodo equals
+		System.out.println(String1.equals(String2));
+		System.out.println(String1.equals(String3));
+		System.out.println(String1.equals(String4));
+		System.out.println(String3.equals(String4));
+		System.out.println(String2.equals(String3));
+		System.out.println(String2.equals(String4));
+	}
+
+}

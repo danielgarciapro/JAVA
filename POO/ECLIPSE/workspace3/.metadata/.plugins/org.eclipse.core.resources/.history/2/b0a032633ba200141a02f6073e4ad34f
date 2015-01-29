@@ -1,0 +1,11 @@
+package ejercicios;
+
+public class TestColecciones1 {
+
+	public static void main(String[] args) {
+		Colecciones1 n = new Colecciones1(12);
+		System.out.println(n);
+
+	}
+
+}
