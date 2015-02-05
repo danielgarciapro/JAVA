@@ -1,0 +1,17 @@
+package diapositivas;
+
+import java.util.Scanner;
+
+public class TestStringBuilder {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String palabra = null;
+		while (true){
+			palabra = in.nextLine();
+			if (palabra.equals("exit")) break; //condicion de salida (exit)
+		}
+		System.out.println(palabra);
+	}
+
+}

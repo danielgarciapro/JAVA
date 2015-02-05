@@ -1,0 +1,20 @@
+package diapositivas;
+
+import java.util.Scanner;
+
+public class TestStringBuilder {
+
+	public static void main(String[] args) {
+		//crear un StringBuilder a partir de String que leemos por Scanner
+		Scanner in = new Scanner(System.in);
+		StringBuilder sBuilder = new StringBuilder();
+		String aux = null;
+		while (true){
+			aux = in.nextLine();
+			sBuilder.append(aux)
+			if (aux.equals("exit")) break; //condicion de salida (exit)
+		}
+		System.out.println(sBuilder);
+	}
+
+}

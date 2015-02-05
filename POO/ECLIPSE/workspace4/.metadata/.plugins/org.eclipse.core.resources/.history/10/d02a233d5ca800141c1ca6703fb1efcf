@@ -1,0 +1,19 @@
+package diapositivas;
+
+import java.util.Scanner;
+
+//Leer con scanner una linea completa
+//1- Indicar si la linea tiene algun numero
+//2- Indicar cuantas palabras tiene un numero
+//3- Indicar cuantos numeros hay en esa frase
+//4- Indicar cuantas palabras empiezan por vocal
+public class String2 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String s1 = in.nextLine();
+		System.out.println(s1);
+
+	}
+
+}

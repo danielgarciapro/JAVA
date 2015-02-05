@@ -1,0 +1,63 @@
+package diapositivas;
+
+public class Auxiliar {
+	/*private Auxiliar(){ para crear un constructor sin atributos
+	}*/
+	public static boolean requisitos(String s){ //con static puedo trabajar con la clase 
+		boolean aux = false;					//Auxiliar sin crear objetos Auxiliar
+		//comprobar que tenga como minimo 8 caracteres
+		//comprobar si tiene letra mayuscula
+		//comprobar si tiene letra minuscula
+		//comprobar si tiene numero
+		//comprobar si tiene alfanumerico
+		aux = minimoLongitudOcho(s) && tieneLetraMayuscula(s) && tieneLetraMinuscula(s)
+				&& tieneDigito(s) && !tieneDigitoOLetra(s);
+		return aux;
+	}
+	private static boolean minimoLongitudOcho(String s){
+		return s.length() > 7;
+	}
+	private static boolean tieneLetraMayuscula(String s){
+		boolean aux = false;
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isUpperCase(s.charAt(i))){
+				aux = true;
+				break;//no merece la pena seguir buscando mayusculas
+			}
+		}
+		return aux;
+	}
+	private static boolean tieneLetraMinuscula(String s){
+		boolean aux = false;
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isLowerCase(s.charAt(i))){
+				aux = true;
+				break;//no merece la pena seguir buscando mayusculas
+			}
+		}
+		return aux;
+	}
+	private static boolean tieneDigito(String s){
+		boolean aux = false;
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isDigit(s.charAt(i))){
+				aux = true;
+				break;//no merece la pena seguir buscando mayusculas
+			}
+		}
+		return aux;
+	}
+	private static boolean tieneDigitoOLetra(String s){
+		boolean aux = false;
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isLetterOrDigit(s.charAt(i))){
+				aux = true;
+				break;//no merece la pena seguir buscando mayusculas
+			}
+		}
+		return aux;
+	}
+	public static void main(String[] args) {
+		System.out.println(requisitos("holahola"));
+	}
+}

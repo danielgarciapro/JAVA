@@ -1,0 +1,13 @@
+package ejercicios;
+
+public class TestClaveSegura {
+
+	public static void main(String[] args) {
+		String final FUENTE_CARACTERES = "0";
+		for (int i = 0; i < FU; i++) {
+			
+			
+		}
+	}
+
+}

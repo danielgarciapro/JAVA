@@ -1,0 +1,18 @@
+package ejercicios;
+
+public class TestClaveSegura {
+
+	public static void main(String[] args) {
+		final String FUENTE_CARACTERES = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStT"
+				+ "uUvVwWxXyYzZ0123456789¿?()=@.:,;!¡&{}";
+		StringBuilder SBuilder = new StringBuilder();
+		int longitud = (int) (Math.random()*FUENTE_CARACTERES.length());
+		
+		for (int i = 0; i < longitud; i++) {
+			int aleatorio= (int) (Math.random()*FUENTE_CARACTERES.length());
+			 SBuilder.append(FUENTE_CARACTERES.charAt(aleatorio));
+		}
+		System.out.println("CLAVE: "+SBuilder);
+	}
+
+}

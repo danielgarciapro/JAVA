@@ -1,0 +1,23 @@
+package diapositivas;
+
+import java.util.Scanner;
+
+public class TestStringBuilder {
+
+	public static void main(String[] args) {
+		//crear un StringBuilder a partir de String que leemos por Scanner
+		Scanner in = new Scanner(System.in);
+		StringBuilder sBuilder = new StringBuilder();
+		String aux = null;
+		System.out.println("Introduce las palabras, exit para salir");
+		while (true){
+			aux = in.next();
+			if (aux.equalsIgnoreCase("exit")) break; //condicion de salida (exit)
+			sBuilder.append(aux);
+			sBuilder.append(' ');
+		}
+		in.close();
+		System.out.println(sBuilder);
+	}
+
+}
