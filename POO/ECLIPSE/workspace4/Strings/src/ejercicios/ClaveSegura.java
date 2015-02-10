@@ -2,57 +2,61 @@ package ejercicios;
 
 public class ClaveSegura {
 	private String clave;
-	public static boolean requisitos(String s){ //con static puedo trabajar con la clase 
+	
+	public ClaveSegura(String clave) {
+		this.clave = clave;
+	}
+	public boolean requisitos(){ //con static puedo trabajar con la clase 
 		//boolean aux = false;					//Auxiliar sin crear objetos Auxiliar
 		//comprobar que tenga como minimo 8 caracteres
 		//comprobar si tiene letra mayuscula
 		//comprobar si tiene letra minuscula
 		//comprobar si tiene numero
 		//comprobar si tiene alfanumerico
-		return  minimoLongitudOcho(s) && tieneLetraMayuscula(s) && tieneLetraMinuscula(s)
-				&& tieneDigito(s) && tieneDigitoOLetra(s); //manera mas optima
+		return  minimoLongitud() && tieneLetraMayuscula() && tieneLetraMinuscula()
+				&& tieneDigito() && tieneDigitoOLetra(); //manera mas optima
 		
 		/*aux = minimoLongitudOcho(s) && tieneLetraMayuscula(s) && tieneLetraMinuscula(s)
 				&& tieneDigito(s) && tieneDigitoOLetra(s);*/
 		//return aux;
 	}
-	private static boolean minimoLongitudOcho(String s){
-		return s.length() > 7;
+	private boolean minimoLongitud(){
+		return clave.length() > 30;
 	}
-	private static boolean tieneLetraMayuscula(String s){
+	private boolean tieneLetraMayuscula(){
 		boolean aux = false;
-		for (int i = 0; i < s.length(); i++) {
-			if (Character.isUpperCase(s.charAt(i))){
+		for (int i = 0; i < clave.length(); i++) {
+			if (Character.isUpperCase(clave.charAt(i))){
 				aux = true;
 				break;//no merece la pena seguir buscando mayusculas
 			}
 		}
 		return aux;
 	}
-	private static boolean tieneLetraMinuscula(String s){
+	private boolean tieneLetraMinuscula(){
 		boolean aux = false;
-		for (int i = 0; i < s.length(); i++) {
-			if (Character.isLowerCase(s.charAt(i))){
+		for (int i = 0; i < clave.length(); i++) {
+			if (Character.isLowerCase(clave.charAt(i))){
 				aux = true;
 				break;//no merece la pena seguir buscando mayusculas
 			}
 		}
 		return aux;
 	}
-	private static boolean tieneDigito(String s){
+	private boolean tieneDigito(){
 		boolean aux = false;
-		for (int i = 0; i < s.length(); i++) {
-			if (Character.isDigit(s.charAt(i))){
+		for (int i = 0; i < clave.length(); i++) {
+			if (Character.isDigit(clave.charAt(i))){
 				aux = true;
 				break;//no merece la pena seguir buscando mayusculas
 			}
 		}
 		return aux;
 	}
-	private static boolean tieneDigitoOLetra(String s){
+	private boolean tieneDigitoOLetra(){
 		boolean aux = false;
-		for (int i = 0; i < s.length(); i++) {
-			if (!Character.isLetterOrDigit(s.charAt(i))){
+		for (int i = 0; i < clave.length(); i++) {
+			if (!Character.isLetterOrDigit(clave.charAt(i))){
 				aux = true;
 				break;//no merece la pena seguir buscando mayusculas
 			}
