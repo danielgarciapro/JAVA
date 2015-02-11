@@ -40,7 +40,7 @@ public class TestConstitucion {
 		System.out.println(stringAleatorios);
 		String pAleatorias = stringAleatorios.toString();
 		String[] palabrasAleatorias = pAleatorias.split(" ");
-		System.out.println(palabrasAleatorias.length);
+		System.out.println("Tamaño del String Aleatorio: "+palabrasAleatorias.length);
 		
 		//probamos la clase utilidades
 		//convertimos la lista de palabras a string
@@ -50,13 +50,21 @@ public class TestConstitucion {
 			aux += string + " ";
 		}
 		
-		UtilidadesString frase = new UtilidadesString();
-		
-		//Resultados de la constitucion
+		/*Por metodos no estaticos, hay que crear objeto
+		UtilidadesString frase = new UtilidadesString(); 
+		System.out.println("Resultados de la constitucion");
 		System.out.println("Tamaño de la constitucion: "+frase.numeroPalabras(aux));
 		System.out.println("Numero de articulos determinados: "+frase.numeroArticulosDeterminados(aux));
 		System.out.println("Numero de articulos indeterminados: "+frase.numeroArticulosIndeterminados(aux));
 		System.out.println("Numero de preposiciones: "+frase.numeroPreposiciones(aux));
-		System.out.println("Frase en mayusculas: "+frase.devolverMayuscula(500, 550, aux));
+		System.out.println("Frase en mayusculas: "+frase.devolverMayuscula(500, 550, aux));*/
+		
+		//metodo estatico, no hay que crear objeto
+		System.out.println("Resultados de la constitucion");
+		System.out.println("Tamaño de la constitucion: "+UtilidadesString.numeroPalabras(aux));
+		System.out.println("Numero de articulos determinados: "+UtilidadesString.numeroArticulosDeterminados(aux));
+		System.out.println("Numero de articulos indeterminados: "+UtilidadesString.numeroArticulosIndeterminados(aux));
+		System.out.println("Numero de preposiciones: "+UtilidadesString.numeroPreposiciones(aux));
+		System.out.println("Frase en mayusculas: "+UtilidadesString.devolverMayuscula(500, 550, aux));
 	}
 }
