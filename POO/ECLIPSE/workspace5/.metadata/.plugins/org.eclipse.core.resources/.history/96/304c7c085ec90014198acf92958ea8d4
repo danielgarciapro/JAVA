@@ -1,0 +1,15 @@
+package ejercicios;
+
+import java.util.List;
+
+import ejercicios.Futbol.Entrenador;
+
+public class TestFutbol {
+
+	public static void main(String[] args) {
+		Futbol f = new Futbol("RealMadrid");
+		Futbol.Entrenador e = f.contratarEntrenador("Ancceloti", 10);
+		List<Futbol.Jugador> plantilla = f.confeccionarEquipo();
+	}
+
+}

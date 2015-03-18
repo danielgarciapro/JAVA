@@ -1,0 +1,15 @@
+package diapositivas;
+
+public class StreamFile {
+
+	public static void main(String[] args) {
+		//stream de entrada - String - > ByteArrayInputStream
+		String frase = "Esto es una frase";
+		//convertimos a un array de bytes
+		byte[] array = frase.getBytes();
+		
+		
+		
+	}
+
+}

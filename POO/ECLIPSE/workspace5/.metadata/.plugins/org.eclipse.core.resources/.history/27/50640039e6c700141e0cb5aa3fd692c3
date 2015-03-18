@@ -1,0 +1,10 @@
+package ejercicios;
+
+public class TestVentilador {
+
+	public static void main(String[] args) {
+		Ventilador v1 = new Ventilador();
+
+	}
+
+}

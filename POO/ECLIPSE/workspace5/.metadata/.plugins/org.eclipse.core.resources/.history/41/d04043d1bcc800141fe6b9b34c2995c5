@@ -1,0 +1,75 @@
+package diapositivas;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+
+public class GridLayoutDemo {
+
+	private JFrame frame;
+	private JTextField nombre;
+	private JTextField apellido;
+	private JLabel lblProvincia;
+	private JComboBox Provincia;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GridLayoutDemo window = new GridLayoutDemo();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GridLayoutDemo() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		frame.getContentPane().add(lblNombre);
+		
+		nombre = new JTextField();
+		frame.getContentPane().add(nombre);
+		nombre.setColumns(10);
+		
+		JLabel lblApellido = new JLabel("Apellido");
+		frame.getContentPane().add(lblApellido);
+		
+		apellido = new JTextField();
+		frame.getContentPane().add(apellido);
+		apellido.setColumns(10);
+		
+		lblProvincia = new JLabel("Provincia");
+		frame.getContentPane().add(lblProvincia);
+		
+		Provincia = new JComboBox();
+		Provincia.setModel(new DefaultComboBoxModel(new String[] {"Jaén", "Málaga", "Córdoba", "Almería", "Huelva", "Cádiz", "Granada", "Sevilla"}));
+		frame.getContentPane().add(Provincia);
+	}
+
+}

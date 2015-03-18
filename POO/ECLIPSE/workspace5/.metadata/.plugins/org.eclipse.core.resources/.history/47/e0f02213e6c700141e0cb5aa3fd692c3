@@ -1,0 +1,8 @@
+package ejercicios;
+
+public class Ventilador {
+	private Velocidad rapidez = Velocidad.LENTO;
+	private boolean encencido = false;
+	private double radio = 50.0;
+	private String color = "blanco";
+}

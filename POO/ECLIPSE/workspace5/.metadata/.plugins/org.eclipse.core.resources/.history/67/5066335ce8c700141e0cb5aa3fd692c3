@@ -1,0 +1,16 @@
+package ejercicios;
+
+public class Problem {
+	String s;
+	class Inner {
+		void testMethod() {
+			s = "Set from Inner";//hay que poner como static o la clase quitarle el static
+		}
+	}
+	public static void main(String[] args) {
+		Problem p = new Problem();
+		Problem.Inner i = p.new Inner();
+		i.testMethod();
+		System.out.println(p.s);
+	}
+}

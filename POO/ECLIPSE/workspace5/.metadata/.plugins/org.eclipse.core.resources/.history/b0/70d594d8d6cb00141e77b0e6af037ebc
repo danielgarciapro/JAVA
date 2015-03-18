@@ -1,0 +1,16 @@
+package diapositivas;
+
+import java.io.StringBufferInputStream;
+
+public class InputStreamBasico {
+
+	public static void main(String[] args) {
+		String frase = "esto es una frase";
+		StringBufferInputStream in = new StringBufferInputStream(frase);
+		int c = in.read();
+		System.out.println(c);
+		System.out.println((char)c);
+
+	}
+
+}
