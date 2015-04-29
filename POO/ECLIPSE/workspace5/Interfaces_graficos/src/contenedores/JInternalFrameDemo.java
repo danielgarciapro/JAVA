@@ -174,10 +174,26 @@ public class JInternalFrameDemo {
 				// TODO Auto-generated method stub
 				JInternalFrame[] miArray = escritorio.getAllFrames();
 				for (int i = 0; i < miArray.length; i++) {
-					miArray[i].dispose();
+					miArray[i].setVisible(false);
 				}
 			}
 		});
+		
+		JButton botonAbrir = new JButton("Abrir");
+		frame.add(botonAbrir, BorderLayout.SOUTH);
+		
+		botonAbrir.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				JInternalFrame[] miArray2 = escritorio.getAllFrames();
+				for (int i = 0; i < miArray2.length; i++) {
+					miArray2[i].setVisible(true);;
+				}
+			}
+		});
+		
 	}
 	
 	private JInternalFrame crearVentanaInterna(String titulo){
