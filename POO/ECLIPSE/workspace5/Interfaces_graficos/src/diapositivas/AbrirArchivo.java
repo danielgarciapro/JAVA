@@ -17,7 +17,7 @@ public class AbrirArchivo {
 		int contador = 1;
 		try (Scanner in = new Scanner(archivo);){
 			while(in.hasNext()){
-				s1 += in.nextLine();
+				s1 += in.next();
 				s1 += " ";
 				if (contador%10 == 0) s1 += "\n";
 				contador++;

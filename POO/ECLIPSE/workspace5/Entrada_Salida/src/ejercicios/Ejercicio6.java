@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class Ejercicio6 {
 	public static void main(String[] args) {
@@ -23,15 +22,17 @@ public class Ejercicio6 {
 		try (BufferedReader in = new BufferedReader(
 				new FileReader(inFile));
 				BufferedWriter out1 = new BufferedWriter(
-						new FileWriter(outFile1))){
+						new FileWriter(outFile1)); BufferedWriter out2 =
+						new BufferedWriter(
+								new FileWriter(outFile2))){
 			//añadir los primeros 300 bytes a la parte1
 			in.read(parte1);
 			//el resto a parte2
-			in.read(parte2, parte1.length, parte2.length);
+			in.read(parte2);
 			
 			//escribimos en salida1
 			out1.write(parte1); out1.flush(); //hacemos el volcado con el flush
-			
+			out2.write(parte2); out2.flush();
 			
 		} catch (IOException e) {
 			// TODO: handle exception

@@ -67,6 +67,7 @@ public class EditorFicheros {
 		botonAbrir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//mostramos al usuario el filechooser, le pasamos el frame para que lo bloquee
+				
 				int returnVal = fileChooser.showOpenDialog(frame);
 				System.out.println(returnVal);
 				if (returnVal == JFileChooser.APPROVE_OPTION){
